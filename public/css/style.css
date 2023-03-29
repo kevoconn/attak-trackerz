@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+
+}
+
+body {
+  background-image: url('../css/assets/AttakTracker-logos.jpeg');
+  background-color: #f3d503;
+
+  /* Full height */
+  /* height: 100%; */
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#homepageBg {
+  background-color: #f3d503;
+}
+
+#exerciseBg {
+  background-color: #f3d503;
+}
+
+#workoutBg {
+  background-color: #f3d503;
+}
+
+.icon-yellow {
+  color: #f3d503
+}
+
+.text-yellow {
+  color: #f3d503
+}
+
+
+

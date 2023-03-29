@@ -1,0 +1,34 @@
+<label for="description" class="flex-row justify-space-around align-items-center b-2 text-5xl font-bold text-gray-900">WORKOUTS</label>
+<div id='workoutBg'>
+  <div class= "flex-row justify-space-around align-items-center">
+
+    {{#unless workouts}} <div class="flex-row justify-center align-items-center ml-2 text-sm font-medium text-gray-900 uppercase">Please Create a workout</div>{{/unless}}
+    {{#each workouts}}
+      <div
+        class='w-full mt-2 max-w-sm p-4 bg-gray-900 border border-gray-900 rounded-lg shadow sm:p-6 md:p-8'
+      >
+        <h5 class='text-3xl font-bold text-yellow'>{{this.name}}</h5>
+        <div
+          class='block mb-2 text-base font-bold text-yellow'
+        >{{this.description}}</div>
+        <p>
+          {{#each exercises}}
+            <div class='block mb-2 text-sm font-base text-yellow'>
+              {{this.name}}
+            </div>
+          {{/each}}
+        </p>
+
+        <button
+          type='button'
+          data-id='{{this.id}}'
+          id='delete'
+          class='w-full text-yellow bg-gray-800 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center'
+        >Delete Workout</button>
+      </div>
+    {{/each}}
+
+  </div>
+</div>
+
+<script src='./js/workout.js'></script>
